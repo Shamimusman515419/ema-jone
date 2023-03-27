@@ -1,0 +1,11 @@
+.mainContaienr{
+display: grid;
+grid-template-columns: 4fr 1fr;
+
+}
+.products{
+     padding: 10px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 25px;   
+}

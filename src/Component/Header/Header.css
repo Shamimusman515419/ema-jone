@@ -1,0 +1,28 @@
+.header{
+      background-color:#1C2B35  ;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+   
+      
+}
+.header div img{
+      padding-left:  20px;
+}
+.manubar{
+     padding-right:  15px;    
+}
+.manubar ul {
+      display:flex; 
+}
+.manubar ul li{
+      margin: 0 15px;
+      list-style: none;
+}
+.manubar ul li a{
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+}

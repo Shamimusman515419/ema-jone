@@ -9,3 +9,10 @@ grid-template-columns: 4fr 1fr;
    grid-template-columns: repeat(3, 1fr);
    grid-gap: 25px;   
 }
+.summatry{
+   background-color: rgba(248, 142, 3, 0.281);
+   padding: 10px;
+   position: sticky;
+   top: 0;
+   height: 100vh;
+}

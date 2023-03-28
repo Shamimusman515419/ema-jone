@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 import Card from '../Card/Card';
 import Summary from '../Summary/Summary';
 import './Container.css'
@@ -16,12 +17,32 @@ const Container = () => {
      declare()
  },[])
 
- 
+ useEffect(()=>{
+     let addCard=[];
+   const stogetCard=getShoppingCart();
+    for( const id in stogetCard){
+      const addproduct=  Shoping.find(product=>product.id ==id);
+       if(addproduct){
+        const quntity=stogetCard[id];
+        addproduct.quantity=quntity
+        addCard.push(addproduct);
+       }
+
+       SetCart(addCard) 
+
+      // console.log( "product",addproduct)
+   
+    }
+  
+    
+    
+ },[Shoping])
 
 
 const ProductCardHendelaer=(product)=>{
       const products=[...Cart,product]
       SetCart(products);
+      addToDb(product.id)
       
 }
 
@@ -38,9 +59,9 @@ const ProductCardHendelaer=(product)=>{
        </div>
 
           
-      <div>
+      <div className=' summatry'>
           
-        <Summary Card={Cart}>  </Summary>
+         <Summary Card={Cart}></Summary>
       </div>
 
       </div>
